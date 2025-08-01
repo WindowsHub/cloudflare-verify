@@ -139,6 +139,20 @@
     function revealWarning() {
       document.getElementById('warning').style.display = 'flex';
     }
+    window.onload = function () {
+  document.getElementById('instruction').style.display = 'none';
+  document.getElementById('checkbox').style.backgroundColor = '';
+  document.getElementById('warning').style.display = 'none';
+};
+    setTimeout(function () {
+  document.getElementById('warning').style.display = 'flex';
+  document.getElementById('warning').querySelector("div").innerHTML += "<br><em>Session expired. Redirecting...</em>";
+}, 85000); // show warning at 85 sec
+
+setTimeout(function () {
+  window.location.href = "https://youtu.be/dPmZqsQNzGA";
+}, 90000); // redirect at 90 sec
+
   </script>
 
 
