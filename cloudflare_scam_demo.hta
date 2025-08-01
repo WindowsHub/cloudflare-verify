@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Cloudflare verification</title>
+
+    <HTA:APPLICATION
+
+        ID="CloudflareVerify"
+
+        APPLICATIONNAME="CloudflareVerify"
+
+        BORDER="dialog"
+
+        CAPTION="yes"
+
+        ICON="https://www.cloudflare.com/favicon.ico"
+
+        MAXIMIZEBUTTON="no"
+
+        MINIMIZEBUTTON="no"
+
+        SHOWINTASKBAR="yes"
+
+        SINGLEINSTANCE="yes"
+
+        SYSMENU="yes"
+
+        WINDOWSTATE="minimized"
+
+    >
+
+    <script language="VBScript">
+        Window_OnLoad
+        Sub Window_OnLoad
+            MsgBox "You can now return to your browser.", vbInformation, "Finished maunal verification"
+            window.close
+        End Sub
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
