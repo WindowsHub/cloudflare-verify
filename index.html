@@ -153,17 +153,15 @@ Redirecting in 5 seconds...
   document.getElementById('warning').style.display = 'none';
   document.getElementById('timeoutWarning').style.display = 'none';
 };
-    // After 5 seconds, show timeout warning
-    setTimeout(() => {
-      document.getElementById('timeoutWarning').style.display = 'flex';
+setTimeout(() => {
+  document.getElementById('timeout-warning').style.display = 'flex';
 
-      // Redirect 5 seconds after timeout warning
-      setTimeout(() => {
-        window.location.href = "https://youtu.be/dPmZqsQNzGA";
-      }, 85000);
+  // Redirect after 5 more seconds (total 90s)
+  setTimeout(() => {
+    window.location.href = "https://youtu.be/dPmZqsQNzGA";
+  }, 5000);
 
-    }, 90000)
-
+}, 85000);
   </script>
 
 
